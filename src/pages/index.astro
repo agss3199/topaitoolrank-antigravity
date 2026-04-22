@@ -1,0 +1,86 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+
+// This is a static representation of the homepage structure
+// Data will eventually be pulled from the content collections via the content graph
+---
+
+<BaseLayout title="Discover the Best AI Tools & Software">
+  <!-- Hero Section -->
+  <section class="text-center py-20 px-4">
+    <h1 class="text-5xl md:text-6xl font-extrabold text-gray-900 tracking-tight mb-6">
+      Find the perfect <span class="text-transparent bg-clip-text bg-gradient-to-r from-brand-600 to-brand-400">AI Tool</span> for your workflow.
+    </h1>
+    <p class="text-xl text-gray-600 max-w-2xl mx-auto mb-10">
+      Expert reviews, side-by-side comparisons, and curated lists of the most powerful artificial intelligence software on the market.
+    </p>
+    <div class="max-w-xl mx-auto relative">
+      <input type="text" placeholder="Search for tools, categories, or tasks..." class="w-full px-6 py-4 rounded-full border border-gray-200 shadow-sm text-lg focus:outline-none focus:ring-2 focus:ring-brand-500 focus:border-transparent">
+      <button class="absolute right-2 top-2 bottom-2 bg-brand-600 text-white px-6 rounded-full font-medium hover:bg-brand-700 transition">
+        Search
+      </button>
+    </div>
+  </section>
+
+  <!-- Featured Categories (Pillars) -->
+  <section class="py-12">
+    <div class="flex items-center justify-between mb-8">
+      <h2 class="text-2xl font-bold text-gray-900">Explore by Category</h2>
+      <a href="/categories" class="text-brand-600 font-medium hover:text-brand-700">View all &rarr;</a>
+    </div>
+    <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+      {['AI Writing', 'Image Generation', 'Coding Assistants', 'SEO & Marketing'].map((cat) => (
+        <a href={`/category/${cat.toLowerCase().replace(/ /g, '-')}`} class="card p-6 flex flex-col items-center justify-center text-center group">
+          <div class="w-12 h-12 bg-brand-50 rounded-full flex items-center justify-center mb-4 group-hover:bg-brand-100 transition">
+            <svg class="w-6 h-6 text-brand-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
+          </div>
+          <h3 class="font-semibold text-gray-900">{cat}</h3>
+        </a>
+      ))}
+    </div>
+  </section>
+
+  <!-- Editor's Picks / Featured Tools -->
+  <section class="py-12">
+    <h2 class="text-2xl font-bold text-gray-900 mb-8">Editor's Picks</h2>
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+      {[1, 2, 3].map((i) => (
+        <div class="card flex flex-col">
+          <div class="h-48 bg-gray-200 w-full object-cover"></div>
+          <div class="p-6 flex-grow">
+            <div class="flex justify-between items-start mb-4">
+              <h3 class="text-xl font-bold text-gray-900">Tool Name {i}</h3>
+              <span class="px-2 py-1 bg-green-100 text-green-800 text-xs font-semibold rounded">Freemium</span>
+            </div>
+            <p class="text-gray-600 mb-4 line-clamp-2">An incredible AI tool that helps you do amazing things faster and better than ever before.</p>
+            <div class="mt-auto pt-4 border-t border-gray-100 flex justify-between items-center">
+              <span class="text-sm text-gray-500">★★★★★ 4.9</span>
+              <a href={`/tools/tool-${i}`} class="text-brand-600 font-medium hover:text-brand-700">Read Review</a>
+            </div>
+          </div>
+        </div>
+      ))}
+    </div>
+  </section>
+
+  <!-- Latest Articles -->
+  <section class="py-12">
+    <div class="flex items-center justify-between mb-8">
+      <h2 class="text-2xl font-bold text-gray-900">Latest from the Blog</h2>
+      <a href="/blog" class="text-brand-600 font-medium hover:text-brand-700">Read more &rarr;</a>
+    </div>
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+      {[1, 2].map((i) => (
+        <a href={`/blog/article-${i}`} class="group flex flex-col md:flex-row gap-6 items-start">
+          <div class="w-full md:w-48 h-32 bg-gray-200 rounded-lg flex-shrink-0 object-cover"></div>
+          <div>
+            <p class="text-sm text-brand-600 font-semibold mb-1">AI Writing</p>
+            <h3 class="text-lg font-bold text-gray-900 group-hover:text-brand-600 mb-2 line-clamp-2">The Ultimate Guide to Generating SEO Content with AI in 2026</h3>
+            <p class="text-gray-600 text-sm line-clamp-2">Learn how the experts use language models to scale their content production without sacrificing quality.</p>
+            <p class="text-xs text-gray-400 mt-2">April 22, 2026 • 5 min read</p>
+          </div>
+        </a>
+      ))}
+    </div>
+  </section>
+</BaseLayout>

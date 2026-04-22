@@ -1,0 +1,9 @@
+{
+  "categories": [
+    { "id": "ai-writing", "name": "AI Writing Tools", "slug": "ai-writing", "description": "Tools for generating, editing, and optimizing text." },
+    { "id": "image-generation", "name": "Image Generation", "slug": "image-generation", "description": "Tools for creating and manipulating images using AI." },
+    { "id": "coding-assistants", "name": "Coding Assistants", "slug": "coding-assistants", "description": "AI-powered tools for developers to write better code faster." },
+    { "id": "seo-marketing", "name": "SEO & Marketing", "slug": "seo-marketing", "description": "AI solutions for search engine optimization and digital marketing." },
+    { "id": "video-creation", "name": "Video Creation", "slug": "video-creation", "description": "AI tools for generating and editing video content." }
+  ]
+}
