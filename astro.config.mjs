@@ -1,7 +1,8 @@
 import { defineConfig } from 'astro/config';
 import tailwind from '@astrojs/tailwind';
-import sitemap from '@astrojs/sitemap';
 
 export default defineConfig({
-  integrations: [tailwind(), sitemap()],
+  site: 'https://agss3199.github.io/topaitoolrank-antigravity',
+  base: '/topaitoolrank-antigravity',
+  integrations: [tailwind()],
 });
