@@ -48,8 +48,8 @@ jobs:
       - name: Build with Astro
         run: |
           ${{ steps.detect-package-manager.outputs.runner }} astro build \
-            --site "https://topaitoolrank.com" \
-            --base "/"
+            --site "https://agss3199.github.io" \
+            --base "/topaitoolrank-antigravity"
         working-directory: ${{ env.BUILD_PATH }}
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
