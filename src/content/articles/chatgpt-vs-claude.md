@@ -1,7 +1,7 @@
 ---
 title: "ChatGPT vs Claude: Which is the Best AI Assistant?"
 description: "An in-depth comparison of ChatGPT and Claude for coding, writing, and analysis. Find out which AI assistant is right for your needs."
-pubDate: 2026-04-22
+pubDate: "2026-04-22"
 author: "Editor"
 category: "ai-writing"
 tags: ["chatgpt", "claude", "comparison"]

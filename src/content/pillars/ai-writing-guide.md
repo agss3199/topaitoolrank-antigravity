@@ -1,7 +1,7 @@
 ---
 title: "The Ultimate Guide to AI Writing Tools in 2026"
 description: "Discover the best AI writing software for content creators, marketers, and students. A comprehensive pillar page covering use cases, top tools, and workflows."
-pubDate: 2026-04-22
+pubDate: "2026-04-22"
 category: "ai-writing"
 status: "published"
 ---
